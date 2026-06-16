@@ -12,9 +12,6 @@
   const msgSection  = document.getElementById('msgSection');
   const detailsBtn  = document.getElementById('detailsBtn');
   const detailsSec  = document.getElementById('detailsSection');
-  const soundBtn    = document.getElementById('soundBtn');
-  const soundOn     = document.getElementById('soundOnIcon');
-  const soundOff    = document.getElementById('soundOffIcon');
 
   // ── Particles on Intro ──
   const particleContainer = document.getElementById('introParticles');
@@ -39,7 +36,6 @@
     setTimeout(() => {
       intro.style.display = 'none';
       wrapper.classList.remove('hidden');
-      soundBtn.style.display = 'flex';
       // Trigger hero card reveal after slight delay
       setTimeout(() => heroCard.classList.add('revealed'), 400);
       // Animate scroll-reveal elements
@@ -117,38 +113,7 @@
     setInterval(tick, 1000);
   }
 
-  // ── Audio (optional ambient) ──
-  let audio = null;
-  let muted = true;
 
-  soundBtn.addEventListener('click', () => {
-    if (!audio) {
-      // Using a gentle ambient tone via Web Audio API
-      try {
-        const ctx = new (window.AudioContext || window.webkitAudioContext)();
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-        osc.connect(gain);
-        gain.connect(ctx.destination);
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(220, ctx.currentTime);
-        gain.gain.setValueAtTime(0.05, ctx.currentTime);
-        osc.start();
-        audio = { ctx, osc, gain, playing: true };
-        muted = false;
-      } catch(e) { return; }
-    } else {
-      if (muted) {
-        audio.gain.gain.setValueAtTime(0.05, audio.ctx.currentTime);
-        muted = false;
-      } else {
-        audio.gain.gain.setValueAtTime(0, audio.ctx.currentTime);
-        muted = true;
-      }
-    }
-    soundOn.style.display  = muted ? 'none'  : 'block';
-    soundOff.style.display = muted ? 'block' : 'none';
-  });
 
   // ── Parallax on hero image (subtle) ──
   window.addEventListener('scroll', () => {

@@ -484,16 +484,7 @@ body {
   opacity: 0.5; letter-spacing: 0.1em; margin-top: 2rem;
 }
 
-/* ══ SOUND BUTTON ══ */
-.sound-btn {
-  position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 500;
-  width: 48px; height: 48px; border-radius: 50%;
-  background: rgba(20,14,6,0.85); backdrop-filter: blur(12px);
-  border: 1px solid rgba(201,168,76,0.35); cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-  color: var(--gold); transition: background 0.3s, transform 0.2s;
-}
-.sound-btn:hover { background: rgba(201,168,76,0.15); transform: scale(1.05); }
+
 
 /* ══ KEYFRAMES ══ */
 @keyframes fadeInDown {
@@ -537,22 +528,16 @@ body {
   .house-name  { font-size: clamp(1.6rem, 7vw, 2rem); }
   .msg-body    { font-size: 0.95rem; line-height: 1.9; }
 
-  /* Countdown: stack into 2x2 grid on narrow phones */
+  /* Countdown: perfectly fit 4 items in one row */
   .countdown-timer {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    grid-template-rows: auto auto;
-    gap: 0.5rem 0.25rem;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    gap: 0.3rem;
   }
-  .countdown-timer .time-sep:last-of-type {
-    grid-column: 1 / -1;
-    display: none;
-  }
-  .time-unit span { font-size: clamp(2rem, 11vw, 3rem); }
-  .time-unit label { font-size: 0.48rem; }
-  .time-sep { font-size: 1.2rem; }
+  .time-unit span { font-size: clamp(1.4rem, 6.5vw, 2.2rem); }
+  .time-unit label { font-size: 0.4rem; }
+  .time-sep { font-size: 1rem; }
 
   /* Event cards stacked */
   .event-cards { gap: 0.75rem; }
