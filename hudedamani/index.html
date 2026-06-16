@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#0d0d0d" />
+  <title>You Are Invited · Al Ni'mah House Warming</title>
+  <meta name="description" content="Mr. S M Hudedamani and Mrs Tahamina Sayed cordially invite you to the Housewarming Ceremony of Al Ni'mah, Dharwad." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Cinzel:wght@400;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══ INTRO SCREEN ══ -->
+  <section id="intro" class="intro-screen">
+    <div class="intro-particles" id="introParticles"></div>
+    <div class="intro-content">
+      <div class="crescent-wrap">
+        <svg class="crescent-icon" viewBox="0 0 60 60" fill="none">
+          <path d="M30 8C19 8 10 17 10 28C10 39 19 48 30 48C22 48 15 41 15 33C15 25 21 18 30 18C34 18 38 20 41 23C39 15 35 8 30 8Z" fill="#C9A84C"/>
+          <circle cx="44" cy="14" r="2.5" fill="#C9A84C"/>
+          <circle cx="50" cy="20" r="1.5" fill="#C9A84C" opacity="0.7"/>
+          <circle cx="38" cy="8" r="1.5" fill="#C9A84C" opacity="0.5"/>
+        </svg>
+      </div>
+      <p class="intro-sub">NEW BEGINNINGS · NEW MEMORIES</p>
+      <div class="divider-line"><span></span><span class="diamond">◆</span><span></span></div>
+      <h1 class="intro-title">HOUSE<br/><em>Warming</em></h1>
+      <div class="divider-line"><span></span><span class="diamond">◆</span><span></span></div>
+      <p class="intro-family">The Hudedamani Family</p>
+      <div class="tap-prompt" id="tapPrompt">
+        <span>TAP TO OPEN INVITATION</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ INVITATION WRAPPER ══ -->
+  <div id="invitationWrapper" class="invitation-wrapper hidden">
+
+    <!-- HERO -->
+    <section class="hero-section">
+      <div class="hero-image-wrap">
+        <img src="house.jpg?v=1" alt="Al Ni'mah" class="hero-img" id="heroImg" />
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-card reveal-card" id="heroCard">
+        <p class="hero-sub">YOU ARE CORDIALLY INVITED TO OUR</p>
+        <h2 class="hero-title">HOUSE<br/><em>Warming</em></h2>
+        <div class="divider-line light"><span></span><span class="diamond">◆</span><span></span></div>
+        <p class="hero-tagline">As we celebrate our new beginning</p>
+        <p class="hero-blessing">With love &amp; blessings</p>
+        <button class="cta-btn" id="ctaBtn">YOU ARE INVITED &rsaquo;</button>
+      </div>
+    </section>
+
+    <!-- MESSAGE SECTION -->
+    <section class="msg-section" id="msgSection">
+      <div class="msg-bg-pattern"></div>
+      <div class="msg-inner animate-in">
+
+        <p class="arabic-text">حَظًّا مِنْ فَضْلِ رَبِّي</p>
+        <p class="arabic-trans">"A fortune from the bounty of my Lord"</p>
+
+        <div class="divider-ornament">❧</div>
+
+        <p class="msg-blessing">With the Blessings of Almighty Allah</p>
+
+        <div class="hosts-badge">INVITED BY</div>
+        <h3 class="hosts-name">Mr. S M Hudedamani<br/>&amp; Mrs Tahamina Sayed</h3>
+        <p class="hosts-city">Of Dharwad</p>
+
+        <div class="house-name-wrap">
+          <p class="house-label">OUR NEW HOME</p>
+          <h2 class="house-name">"Al Ni'mah"</h2>
+        </div>
+
+        <p class="msg-body">
+          We cordially solicit your gracious presence with family and friends
+          on the occasion of the opening ceremony of our newly built house.
+          We would be honoured by your presence and blessings as we
+          celebrate this new beginning.
+        </p>
+
+        <div class="divider-ornament">❧</div>
+
+        <button class="cta-btn dark" id="detailsBtn">SEE EVENT DETAILS &rsaquo;</button>
+      </div>
+    </section>
+
+    <!-- EVENT DETAILS -->
+    <section class="details-section" id="detailsSection">
+      <div class="details-bg"></div>
+      <div class="details-inner animate-in">
+        <p class="section-label">THE CELEBRATION</p>
+        <h2 class="section-title">Event Details</h2>
+        <div class="divider-line light"><span></span><span class="diamond">◆</span><span></span></div>
+
+        <div class="countdown-wrap" id="countdownWrap">
+          <p class="countdown-label">CELEBRATION BEGINS IN</p>
+          <div class="countdown-timer" id="countdownTimer">
+            <div class="time-unit"><span id="cdDays">00</span><label>DAYS</label></div>
+            <span class="time-sep">·</span>
+            <div class="time-unit"><span id="cdHours">00</span><label>HOURS</label></div>
+            <span class="time-sep">·</span>
+            <div class="time-unit"><span id="cdMins">00</span><label>MINS</label></div>
+            <span class="time-sep">·</span>
+            <div class="time-unit"><span id="cdSecs">00</span><label>SECS</label></div>
+          </div>
+        </div>
+
+        <div class="event-cards">
+          <div class="event-card">
+            <div class="event-icon">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="event-info">
+              <p class="event-label">DATE</p>
+              <p class="event-val">27 June 2026</p>
+              <p class="event-sub">Saturday</p>
+            </div>
+          </div>
+
+          <div class="event-card">
+            <div class="event-icon">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="event-info">
+              <p class="event-label">TIME</p>
+              <p class="event-val">12:30 PM</p>
+              <p class="event-sub">Onwards</p>
+            </div>
+          </div>
+
+          <div class="event-card">
+            <div class="event-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 21C12 21 5 14.5 5 9a7 7 0 0114 0c0 5.5-7 12-7 12z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <div class="event-info">
+              <p class="event-label">VENUE</p>
+              <p class="event-val">H.No. 15</p>
+              <p class="event-sub">Keshav Nagar, Pavan School Road,<br/>Dharwad</p>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </section>
+
+    <!-- GALLERY / HOUSE SHOWCASE -->
+    <section class="showcase-section">
+      <div class="showcase-inner animate-in">
+        <p class="section-label light">OUR HOME</p>
+        <h2 class="section-title light">"Al Ni'mah"</h2>
+        <div class="divider-line light"><span></span><span class="diamond">◆</span><span></span></div>
+        <div class="showcase-img-wrap">
+          <img src="house.jpg?v=1" alt="Al Ni'mah House" class="showcase-img" />
+          <div class="showcase-badge">Al Ni'mah</div>
+        </div>
+        <p class="showcase-quote">
+          "And He gave you from all you asked of Him."<br/>
+          <em>— Quran 14:34</em>
+        </p>
+      </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="closing-section">
+      <div class="closing-inner animate-in">
+        <div class="crescent-wrap small">
+          <svg class="crescent-icon" viewBox="0 0 60 60" fill="none">
+            <path d="M30 8C19 8 10 17 10 28C10 39 19 48 30 48C22 48 15 41 15 33C15 25 21 18 30 18C34 18 38 20 41 23C39 15 35 8 30 8Z" fill="#C9A84C"/>
+            <circle cx="44" cy="14" r="2.5" fill="#C9A84C"/>
+          </svg>
+        </div>
+        <p class="closing-msg">Your presence will make this occasion even more special.</p>
+        <div class="divider-ornament gold">❧</div>
+        <p class="closing-sub">Join us in making beautiful memories in our new home.</p>
+        <div class="regards-box">
+          <p class="regards-line">With Warm Regards,</p>
+          <h3 class="regards-name">The Hudedamani Family</h3>
+        </div>
+        <p class="footer-note">© 2026 · Al Ni'mah Housewarming · Dharwad</p>
+      </div>
+    </section>
+
+  </div><!-- /invitationWrapper -->
+
+  <!-- SOUND TOGGLE -->
+  <button class="sound-btn" id="soundBtn" title="Toggle Sound" style="display:none">
+    <svg id="soundOnIcon" viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M11 5L6 9H2v6h4l5 4V5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M15.54 8.46a5 5 0 010 7.07M19.07 4.93a10 10 0 010 14.14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    <svg id="soundOffIcon" viewBox="0 0 24 24" fill="none" width="20" height="20" style="display:none"><path d="M11 5L6 9H2v6h4l5 4V5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M23 9l-6 6M17 9l6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  </button>
+
+  <script src="app.js?v=3"></script>
+</body>
+</html>
